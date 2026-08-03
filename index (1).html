@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أبو فضل - المسؤول التنفيذي | ديكورات وترميم فاخر</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#A67C52',
+                            goldHover: '#8C643B',
+                            lightGold: '#D4B896',
+                            cream: '#FAF8F5',
+                            dark: '#18181B',
+                            darkCard: '#242427',
+                            border: '#3F3F46',
+                            subtext: '#A1A1AA'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #18181B;
+            color: #FAF8F5;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-nav {
+            background: rgba(24, 24, 27, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(166, 124, 82, 0.2);
+        }
+
+        .glass-card {
+            background: rgba(36, 36, 39, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(166, 124, 82, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(166, 124, 82, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(166, 124, 82, 0.2);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #18181B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #A67C52;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8C643B;
+        }
+
+        /* Gold Gradient Text */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #D4B896 0%, #A67C52 50%, #8C643B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Gold Button Gradient */
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #A67C52 0%, #8C643B 100%);
+        }
+        .bg-gold-gradient:hover {
+            background: linear-gradient(135deg, #B88D61 0%, #9E7348 100%);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-gold selection:text-white">
+
+    <!-- ================= 1. HEADER / NAVBAR ================= -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo with Brand Symbol -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full border-2 border-brand-gold p-1 bg-white/5 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                        <!-- SVG Logo Symbol mirroring the Brand Logo -->
+                        <svg viewBox="0 0 100 100" class="w-full h-full fill-brand-gold">
+                            <path d="M50 10 L85 40 L75 40 L75 80 L60 80 L60 50 L40 50 L40 80 L25 80 L25 40 L15 40 Z"/>
+                            <path d="M45 30 L55 30 L55 90 L45 90 Z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block font-bold text-xl tracking-wide text-white group-hover:text-brand-lightGold transition-colors">أبو فضل</span>
+                        <span class="block text-xs text-brand-gold font-medium -mt-1 tracking-widest">المسؤول التنفيذي</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-zinc-300">
+                    <a href="#hero" class="hover:text-brand-lightGold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">الرئيسية</a>
+                    <a href="#about" class="hover:text-brand-lightGold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">عن المؤسسة</a>
+                    <a href="#services" class="hover:text-brand-lightGold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">خدماتنا</a>
+                    <a href="#portfolio" class="hover:text-brand-lightGold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">معرض الأعمال</a>
+                    <a href="#why-us" class="hover:text-brand-lightGold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">لماذا نحن</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="https://wa.me/966500000000?text=مرحبا،%20أود%20الاستفسار%20عن%20خدمات%20الديكور%20والترميم" target="_blank" class="px-5 py-2.5 rounded-xl bg-gold-gradient text-white font-bold text-sm shadow-lg shadow-brand-gold/20 hover:shadow-brand-gold/40 transition-all flex items-center gap-2 transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>تواصل معنا</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-zinc-300 hover:text-white p-2 rounded-lg focus:outline-none">
+                    <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-brand-border/40 bg-brand-darkCard px-4 pt-4 pb-6 space-y-3">
+            <a href="#hero" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-white/5 hover:text-brand-lightGold">الرئيسية</a>
+            <a href="#about" class="block px-3 py-2 rounded-lg text-base font-medium text-zinc-300 hover:bg-white/5 hover:text-brand-lightGold">عن المؤسسة</a>
+            <a href="#services" class="block px-3 py-2 rounded-lg text-base font-medium text-zinc-300 hover:bg-white/5 hover:text-brand-lightGold">خدماتنا</a>
+            <a href="#portfolio" class="block px-3 py-2 rounded-lg text-base font-medium text-zinc-300 hover:bg-white/5 hover:text-brand-lightGold">معرض الأعمال</a>
+            <a href="#why-us" class="block px-3 py-2 rounded-lg text-base font-medium text-zinc-300 hover:bg-white/5 hover:text-brand-lightGold">لماذا نحن</a>
+            <a href="https://wa.me/966500000000?text=مرحبا،%20أود%20الاستفسار%20عن%20خدمات%20الديكور%20والترميم" target="_blank" class="block w-full text-center px-4 py-3 rounded-xl bg-gold-gradient text-white font-bold text-sm shadow-md mt-4">
+                <i class="fa-brands fa-whatsapp text-lg ml-2"></i> تواصل عبر الواتساب
+            </a>
+        </div>
+    </header>
+
+    <!-- ================= 2. HERO SECTION ================= -->
+    <section id="hero" class="relative min-h-screen pt-28 pb-20 flex items-center justify-center overflow-hidden">
+        <!-- Background Lighting FX -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/10 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-amber-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content Column -->
+                <div class="lg:col-span-7 text-center lg:text-right space-y-8">
+                    
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-gold/30 bg-brand-gold/10 text-brand-lightGold text-sm font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                        <span>إشراف هندسي متكامل ومباشر</span>
+                    </div>
+
+                    <!-- Main Title -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight">
+                        نُحول مساحتك إلى <br class="hidden sm:inline">
+                        <span class="text-gold-gradient">تحفة معمارية فاخرة</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="text-lg sm:text-xl text-zinc-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        متخصصون في أعمال الإنشاء والترميم بكافة الأشكال (<span class="text-white font-semibold">مودرن، كلاسيك، نيو كلاسيك</span>)، وجميع أعمال الدهانات والديكورات الحديثة تحت إشراف نخبة من المهندسين والمشرفين التنفيذيين.
+                    </p>
+
+                    <!-- CTA Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://wa.me/966500000000?text=مرحبا،%20أود%20طلب%20استشارة%20مجانية" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gold-gradient text-white font-bold text-base shadow-xl shadow-brand-gold/25 hover:shadow-brand-gold/40 transition-all flex items-center justify-center gap-3 group">
+                            <span>اطلب استشارة مجانية</span>
+                            <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-xl border border-brand-border bg-brand-darkCard/80 hover:bg-brand-darkCard text-white font-semibold text-base transition-all text-center">
+                            تصفح معرض الأعمال
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlights -->
+                    <div class="pt-8 border-t border-brand-border/40 grid grid-cols-3 gap-4 text-center lg:text-right">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-brand-lightGold">+1,100</div>
+                            <div class="text-xs sm:text-sm text-zinc-400">مشروع ومنشور تنفيذي</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-brand-lightGold">100%</div>
+                            <div class="text-xs sm:text-sm text-zinc-400">إشراف هندسي دقيق</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-brand-lightGold">مودرن & كلاسيك</div>
+                            <div class="text-xs sm:text-sm text-zinc-400">خيارات تشطيب متكاملة</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Feature Image Cards Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        
+                        <!-- Main Big Image (Featured Bedroom Design) -->
+                        <div class="rounded-3xl overflow-hidden border-2 border-brand-gold/30 shadow-2xl relative group">
+                            <img src="Screenshot_3-8-2026_185957_www.instagram.com.jpeg" alt="ديكور غرفة نوم مودرن فاخرة" class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-6 right-6 left-6 text-white">
+                                <span class="px-3 py-1 rounded-md bg-brand-gold/80 text-xs font-bold mb-2 inline-block">تصميم وتنفيذ</span>
+                                <h3 class="text-lg font-bold">غرف نوم مودرن مع إضاءة مخفية</h3>
+                            </div>
+                        </div>
+
+                        <!-- Floating Secondary Overlay Card (TV Wall Feature) -->
+                        <div class="absolute -bottom-8 -right-8 w-2/3 rounded-2xl overflow-hidden border-2 border-brand-gold/40 shadow-2xl hidden sm:block bg-brand-dark">
+                            <img src="Screenshot_3-8-2026_19157_www.instagram.com.jpeg" alt="جدار شاشة مع أرفف دافئة" class="w-full h-48 object-cover">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 3. ABOUT SECTION ================= -->
+    <section id="about" class="py-20 bg-brand-darkCard/50 border-y border-brand-border/30 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Profile Identity Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card p-8 rounded-3xl text-center relative overflow-hidden">
+                        <div class="w-32 h-32 mx-auto rounded-full border-4 border-brand-gold p-1 bg-white mb-6 shadow-xl">
+                            <img src="Screenshot_3-8-2026_19346_www.instagram.com.jpeg" alt="أبو فضل - المسؤول التنفيذي" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <h2 class="text-2xl font-bold text-white mb-1">أبو فضل</h2>
+                        <p class="text-brand-gold font-semibold text-sm mb-4">المسؤول التنفيذي الإنشائي والديكوري</p>
+                        
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            نلتزم بتقديم أعلى مستويات الجودة في التنفيذ والتشطيب، حيث ندمج بين الابتكار المعماري والإشراف الهيدسي الميداني المستمر لضمان تحويل المخططات إلى واقع تفخر به.
+                        </p>
+
+                        <div class="flex items-center justify-center gap-4 text-zinc-400 border-t border-brand-border/40 pt-4">
+                            <a href="https://instagram.com/abualfadl653" target="_blank" class="hover:text-brand-lightGold transition-colors text-lg"><i class="fa-brands fa-instagram"></i> @abualfadl653</a>
+                            <span class="text-brand-border">•</span>
+                            <a href="https://tiktok.com/@abualfadl653" target="_blank" class="hover:text-brand-lightGold transition-colors text-lg"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Description & Pillars -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-block px-4 py-1.5 rounded-lg bg-brand-gold/10 border border-brand-gold/30 text-brand-lightGold text-sm font-semibold">
+                        من نحن
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-snug">
+                        دقة في التنفيذ.. إشراف هندسي.. وتشطيبات تناسب ذوقك الفاخر
+                    </h2>
+                    <p class="text-zinc-300 leading-relaxed">
+                        نعمل في مؤسسة <span class="text-brand-lightGold font-bold">المسؤول التنفيذي</span> على تقديم رؤية معمارية شاملة لكل مشروع نُسند إليه. سواء كنت تبحث عن إنشاء كامل من الصفر، أو ترميم وتحديث لمبنى قائم، فإننا نجمع بين الأناقة المعاصرة والجودة الإنشائية العالية.
+                    </p>
+
+                    <!-- Features List -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start gap-3 p-4 rounded-xl bg-brand-dark/60 border border-brand-border/40">
+                            <div class="w-10 h-10 rounded-lg bg-brand-gold/20 flex items-center justify-center text-brand-gold shrink-0">
+                                <i class="fa-solid fa-compass-drafting text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">إشراف هندسي 100%</h4>
+                                <p class="text-xs text-zinc-400 mt-1">متابعة ميدانية مستمرة لضمان دقة المقاسات والسلامة الإنشائية.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-4 rounded-xl bg-brand-dark/60 border border-brand-border/40">
+                            <div class="w-10 h-10 rounded-lg bg-brand-gold/20 flex items-center justify-center text-brand-gold shrink-0">
+                                <i class="fa-solid fa-paint-roller text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">دهانات وديكورات حديثة</h4>
+                                <p class="text-xs text-zinc-400 mt-1">تقنيات دهان متطورة وخامات فاخرة تقاوم العوامل وتدوم طويلاً.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-4 rounded-xl bg-brand-dark/60 border border-brand-border/40">
+                            <div class="w-10 h-10 rounded-lg bg-brand-gold/20 flex items-center justify-center text-brand-gold shrink-0">
+                                <i class="fa-solid fa-lightbulb text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">أنظمة إضاءة Led معمارية</h4>
+                                <p class="text-xs text-zinc-400 mt-1">توزيع إضاءة دافئ ومخفي يبرز جمالية التفاصيل والقطع الخشبية.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-4 rounded-xl bg-brand-dark/60 border border-brand-border/40">
+                            <div class="w-10 h-10 rounded-lg bg-brand-gold/20 flex items-center justify-center text-brand-gold shrink-0">
+                                <i class="fa-solid fa-house-circle-check text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">تسليم المفتاح</h4>
+                                <p class="text-xs text-zinc-400 mt-1">نستلم الفراغ صامتاً ونبث فيه الحياة لتستلمه جاهزاً بالكامل.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 4. SERVICES SECTION ================= -->
+    <section id="services" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block px-4 py-1.5 rounded-lg bg-brand-gold/10 border border-brand-gold/30 text-brand-lightGold text-sm font-semibold mb-3">
+                    خدماتنا المتميزة
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">خدمات متكاملة من التخطيط إلى التسليم</h2>
+                <p class="text-zinc-400 text-base">نغطي كافة متطلباتك المعمارية والديكورية بأعلى مقاييس الاحترافية</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="glass-card rounded-2xl p-8 relative overflow-hidden group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-gold/20 text-brand-gold flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">الإنشاء والترميم الشامل</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        تنفيذ أعمال التكسير، إعادة التوزيع، التأسيس الإنشائي، والترميم الكلي للمباني والفلل السكنية بطابع مودرن، كلاسيك، أو نيو كلاسيك.
+                    </p>
+                    <ul class="text-xs text-zinc-300 space-y-2 border-t border-brand-border/40 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> معالجة التصدعات والترميم الهندسي</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> تعديل القواطع والجدران الداخلية</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="glass-card rounded-2xl p-8 relative overflow-hidden group border-brand-gold/40">
+                    <div class="w-14 h-14 rounded-xl bg-brand-gold text-white flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-brand-gold/30">
+                        <i class="fa-solid fa-swatchbook"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">الدهانات والديكورات الحديثة</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        تطبيق أحدث صيحات الدهانات الداخلية، التكسيات الخشبية، المظلات، والتكسيات الجدارية المزودة بإضاءات ليد مخفية.
+                    </p>
+                    <ul class="text-xs text-zinc-300 space-y-2 border-t border-brand-border/40 pt-4">
+                        <li class="flex items-center gap-2"><li class="fa-solid fa-check text-brand-gold"></i> جدران شاشات وتكسيات خشبية دافئة</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> دهانات ملمس مخملي ومودرن</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="glass-card rounded-2xl p-8 relative overflow-hidden group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-gold/20 text-brand-gold flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">الإشراف الهندسي والميداني</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        متابعة يومية دقيقة لسير العمل من قبل مهندسين ومشرفين مختصين لضمان المطابقة الكاملة للمخططات وتفادي الأخطاء.
+                    </p>
+                    <ul class="text-xs text-zinc-300 space-y-2 border-t border-brand-border/40 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> إشراف على مراحل التشطيب</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> ضبط الجودة والمواعيد</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 5. FILTERABLE PORTFOLIO GALLERY ================= -->
+    <section id="portfolio" class="py-24 bg-brand-darkCard/30 border-t border-brand-border/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-block px-4 py-1.5 rounded-lg bg-brand-gold/10 border border-brand-gold/30 text-brand-lightGold text-sm font-semibold mb-3">
+                    معرض الأعمال الحقيقية
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">نماذج من مشاريعنا وتنفيذنا الميداني</h2>
+                <p class="text-zinc-400 text-base">اضغط على أي صورة لاستعراض التفاصيل بدقة عالية</p>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+                <button class="filter-btn active px-6 py-2.5 rounded-xl bg-gold-gradient text-white font-bold text-sm shadow-md transition-all" data-filter="all">الكل</button>
+                <button class="filter-btn px-6 py-2.5 rounded-xl bg-brand-darkCard border border-brand-border text-zinc-300 hover:text-white font-medium text-sm transition-all" data-filter="living">مجالس وصالونات</button>
+                <button class="filter-btn px-6 py-2.5 rounded-xl bg-brand-darkCard border border-brand-border text-zinc-300 hover:text-white font-medium text-sm transition-all" data-filter="bedroom">غرف نوم</button>
+                <button class="filter-btn px-6 py-2.5 rounded-xl bg-brand-darkCard border border-brand-border text-zinc-300 hover:text-white font-medium text-sm transition-all" data-filter="tv">جدران شاشات وإضاءة</button>
+            </div>
+
+            <!-- Image Grid Gallery (10 Images from user assets) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                
+                <!-- Image 1 -->
+                <div class="gallery-item living group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border/50 h-80" onclick="openModal('Screenshot_3-8-2026_19138_www.instagram.com.jpeg', 'مجلس مودرن فاخر مع إضاءة خافتة وديكورات ستائر')">
+                    <img src="Screenshot_3-8-2026_19138_www.instagram.com.jpeg" alt="مجلس فاخر" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-lightGold">مجالس وصالونات</span>
+                        <h4 class="text-lg font-bold text-white">مجلس مودرن فاخر مع إضاءة دافئة</h4>
+                        <div class="mt-2 text-xs text-zinc-300 flex items-center gap-1">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> انقر للتكبير
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="gallery-item tv group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border/50 h-80" onclick="openModal('Screenshot_3-8-2026_19157_www.instagram.com.jpeg', 'تصميم جدار شاشة مع أرفف جانبية مضاءة')">
+                    <img src="Screenshot_3-8-2026_19157_www.instagram.com.jpeg" alt="جدار شاشة TV" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-lightGold">جدران شاشات وإضاءة</span>
+                        <h4 class="text-lg font-bold text-white">وحدة شاشة مودرن بلمسات خشبية</h4>
+                        <div class="mt-2 text-xs text-zinc-300 flex items-center gap-1">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> انقر للتكبير
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="gallery-item bedroom group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border/50 h-80" onclick="openModal('Screenshot_3-8-2026_185957_www.instagram.com.jpeg', 'جناح نوم فاخر بديكور جداري وثريات حلقية')">
+                    <img src="Screenshot_3-8-2026_185957_www.instagram.com.jpeg" alt="غرفة نوم رئيسية" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-lightGold">غرف نوم</span>
+                        <h4 class="text-lg font-bold text-white">جناح نوم فاخر وإضاءات معلقة</h4>
+                        <div class="mt-2 text-xs text-zinc-300 flex items-center gap-1">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> انقر للتكبير
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="gallery-item living group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border/50 h-80" onclick="openModal('Screenshot_3-8-2026_19124_www.instagram.com.jpeg', 'جلسة مودرن مع طاولة رخامية وتنسيق ألوان أنيق')">
+                    <img src="Screenshot_3-8-2026_19124_www.instagram.com.jpeg" alt="جلسة مع طاولة رخام" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-lightGold">مجالس وصالونات</span>
+                        <h4 class="text-lg font-bold text-white">تناسق أثاث وستائر مودرن</h4>
+                        <div class="mt-2 text-xs text-zinc-300 flex items-center gap-1">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> انقر للتكبير
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="gallery-item bedroom group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border/50 h-80" onclick="openModal('Screenshot_3-8-2026_1917_www.instagram.com.jpeg', 'ركن استرخاء في غرفة النوم مع تكسيات خشبية جدارية')">
+                    <img src="Screenshot_3-8-2026_1917_www.instagram.com.jpeg" alt="ركن استرخاء غرفة نوم" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-lightGold">غرف نوم</span>
+                        <h4 class="text-lg font-bold text-white">ركن استرخاء بتكسيات خشبية</h4>
+                        <div class="mt-2 text-xs text-zinc-300 flex items-center gap-1">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> انقر للتكبير
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+                <div class="gallery-item bedroom group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border/50 h-80" onclick="openModal('Screenshot_3-8-2026_19045_www.instagram.com.jpeg', 'تصميم سرير مع خلفية قماشية ولوحة تشكيلية معاصرة')">
+                    <img src="Screenshot_3-8-2026_19045_www.instagram.com.jpeg" alt="سرير مودرن ولوحة معاصرة" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-lightGold">غرف نوم</span>
+                        <h4 class="text-lg font-bold text-white">تصميم خلفية سرير مع إضاءة دافئة</h4>
+                        <div class="mt-2 text-xs text-zinc-300 flex items-center gap-1">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> انقر للتكبير
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 7 -->
+                <div class="gallery-item bedroom group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border/50 h-80" onclick="openModal('Screenshot_3-8-2026_19032_www.instagram.com.jpeg', 'سرير فاخر مع لوحات جدارية تجريدية وتناسق بيج دافئ')">
+                    <img src="Screenshot_3-8-2026_19032_www.instagram.com.jpeg" alt="سرير دافئ ولوحات جدارية" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-lightGold">غرف نوم</span>
+                        <h4 class="text-lg font-bold text-white">سرير نيو كلاسيك بألوان دافئة</h4>
+                        <div class="mt-2 text-xs text-zinc-300 flex items-center gap-1">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> انقر للتكبير
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 8 -->
+                <div class="gallery-item tv group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border/50 h-80" onclick="openModal('Screenshot_3-8-2026_1909_www.instagram.com.jpeg', 'ركن ديكور ومدخل مع إضاءة عمودية معلقة ونباتات دافئة')">
+                    <img src="Screenshot_3-8-2026_1909_www.instagram.com.jpeg" alt="ركن ديكور ومدخل" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-lightGold">جدران شاشات وإضاءة</span>
+                        <h4 class="text-lg font-bold text-white">تفاصيل إضاءة معلقة ومدخل أنيق</h4>
+                        <div class="mt-2 text-xs text-zinc-300 flex items-center gap-1">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> انقر للتكبير
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 9 -->
+                <div class="gallery-item bedroom group relative rounded-2xl overflow-hidden cursor-pointer border border-brand-border/50 h-80" onclick="openModal('Screenshot_3-8-2026_1917_www.instagram.com (1).jpeg', 'تنسيق متكامل لغرفة النوم مع ممر مدخل مضاء')">
+                    <img src="Screenshot_3-8-2026_1917_www.instagram.com (1).jpeg" alt="تنسيق جناح نوم" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs font-semibold text-brand-lightGold">غرف نوم</span>
+                        <h4 class="text-lg font-bold text-white">إضاءة ممرات وديكور خشبي</h4>
+                        <div class="mt-2 text-xs text-zinc-300 flex items-center gap-1">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> انقر للتكبير
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= LIGHTBOX MODAL (Pure JS) ================= -->
+    <div id="image-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <button onclick="closeModal()" class="absolute top-6 left-6 text-white text-3xl hover:text-brand-gold transition-colors z-50">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center space-y-4">
+            <div class="relative inline-block overflow-hidden rounded-2xl border-2 border-brand-gold/40 max-h-[80vh]">
+                <img id="modal-img" src="" alt="صورة المعرض" class="max-h-[80vh] w-auto mx-auto object-contain">
+            </div>
+            <p id="modal-caption" class="text-lg font-semibold text-brand-lightGold"></p>
+        </div>
+    </div>
+
+    <!-- ================= 6. WHY CHOOSE US ================= -->
+    <section id="why-us" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    
+                    <div class="space-y-6">
+                        <div class="inline-block px-4 py-1.5 rounded-lg bg-brand-gold/10 border border-brand-gold/30 text-brand-lightGold text-sm font-semibold">
+                            لماذا تختار المسؤول التنفيذي؟
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-black text-white leading-snug">
+                            نضمن لك الجودة والالتزام في كل خطوة
+                        </h2>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+                            نعلم أن مشروعك أو بيتك هو استثمار العمر، ولذلك نتبع أعلى معايير التنفيذ الهندسي لضمان أن النتيجة النهائية تفوق توقعاتك.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center font-bold text-sm">1</div>
+                                <span class="text-white font-medium text-sm sm:text-base">استخدام أجود أنواع الدهانات ومواد الترميم المعتمدة</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center font-bold text-sm">2</div>
+                                <span class="text-white font-medium text-sm sm:text-base">التزام صارم بالمواعيد والجداول الزمنية للتسليم</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center font-bold text-sm">3</div>
+                                <span class="text-white font-medium text-sm sm:text-base">تغطية تشمل الفلل، الشقق، والمكاتب التجارية</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Box inside Why Us -->
+                    <div class="bg-brand-dark p-8 rounded-2xl border border-brand-gold/30 text-center space-y-6">
+                        <i class="fa-solid fa-headset text-5xl text-brand-gold"></i>
+                        <h3 class="text-2xl font-bold text-white">هل لديك مشروع قادم؟</h3>
+                        <p class="text-zinc-400 text-sm">تواصل معنا اليوم واحصل على معاينة واستشارة مبدئية مجانية لموقعك.</p>
+                        <a href="https://wa.me/966500000000?text=مرحبا،%20أود%20طلب%20معاينة%20ميدانية" target="_blank" class="inline-block w-full py-4 rounded-xl bg-gold-gradient text-white font-bold text-base shadow-lg shadow-brand-gold/30 hover:scale-[1.02] transition-transform">
+                            <i class="fa-brands fa-whatsapp text-xl ml-2"></i> أحجز موعد معاينة الآن
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 7. FOOTER ================= -->
+    <footer class="bg-brand-dark text-zinc-400 border-t border-brand-border/40 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full border border-brand-gold p-1 bg-white/5 flex items-center justify-center">
+                            <svg viewBox="0 0 100 100" class="w-full h-full fill-brand-gold">
+                                <path d="M50 10 L85 40 L75 40 L75 80 L60 80 L60 50 L40 50 L40 80 L25 80 L25 40 L15 40 Z"/>
+                                <path d="M45 30 L55 30 L55 90 L45 90 Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-lg text-white">أبو فضل - المسؤول التنفيذي</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-zinc-400 leading-relaxed max-w-sm">
+                        إنشاء وترميم بأشكال مختلفة (مودرن، كلاسيك، نيو كلاسيك). جميع أعمال الدهانات والديكورات تحت إشراف مشرفين ومهندسين مختصين.
+                    </p>
+                </div>
+
+                <!-- Col 2: Social Links -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-bold text-sm border-b border-brand-border/40 pb-2 inline-block">حسابات التواصل</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li>
+                            <a href="https://instagram.com/abualfadl653" target="_blank" class="hover:text-brand-lightGold transition-colors flex items-center gap-2">
+                                <i class="fa-brands fa-instagram text-brand-gold"></i> Instagram: @abualfadl653
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://tiktok.com/@abualfadl653" target="_blank" class="hover:text-brand-lightGold transition-colors flex items-center gap-2">
+                                <i class="fa-brands fa-tiktok text-brand-gold"></i> TikTok: @abualfadl653
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Quick Contact -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-bold text-sm border-b border-brand-border/40 pb-2 inline-block">التواصل المباشر</h4>
+                    <p class="text-xs">للاستفسارات والطلبات المباشرة عبر الواتساب:</p>
+                    <a href="https://wa.me/966500000000" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-brand-lightGold hover:underline">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> انقر للمحادثة المباشرة
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="border-t border-brand-border/30 pt-6 text-center text-xs text-zinc-500">
+                جميع الحقوق محفوظة © 2026 - أبو فضل (المسؤول التنفيذي)
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= PURE VANILLA JAVASCRIPT ================= -->
+    <script>
+        // 1. Mobile Menu Toggle Functionality
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on clicking any link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Portfolio Category Filtering (Pure JS)
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-gold-gradient', 'text-white');
+                    b.classList.add('bg-brand-darkCard', 'text-zinc-300');
+                });
+
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-gold-gradient', 'text-white');
+                btn.classList.remove('bg-brand-darkCard', 'text-zinc-300');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 3. Image Lightbox Modal Functions
+        function openModal(imgSrc, captionText) {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalCaption = document.getElementById('modal-caption');
+
+            modalImg.src = imgSrc;
+            modalCaption.innerText = captionText;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal open
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('image-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        // Close Modal on ESC key or Outside click
+        document.getElementById('image-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'image-modal') {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
